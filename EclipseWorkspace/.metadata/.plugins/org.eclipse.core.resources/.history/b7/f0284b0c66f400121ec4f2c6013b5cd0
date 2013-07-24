@@ -17,6 +17,5 @@
 	</head>
 	<body onLoad="init()">
 		<h1 id="shadow-runner-title">...</h1>
-		<a href="shadowmap.html">map</a>
 	</body>
 </html>
