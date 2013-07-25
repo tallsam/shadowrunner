@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
     <title>Map</title>
-     
-    <link rel="stylesheet" href="../css/jquery.mobile-1.3.1.css" />
-     
-    <script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
-    <script type="text/javascript" src="../js/jquery.mobile-1.3.1.min.js"></script>
+     <script type="text/javascript" src="../js/cordova.js"></script>
+	<link rel="stylesheet" href="../css/jquery.mobile-1.3.1.css" />
+	
+	<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.mobile-1.3.1.min.js"></script>
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-    <script type="text/javascript" src="../js/cordova.js"></script>
+    
      
 <script type="text/javascript">
  
@@ -18,7 +18,8 @@ var map;
 var marker;
 var infowindow;
 var watchID;
- 
+
+		 
 $(document).ready(function(){
     document.addEventListener("deviceready", onDeviceReady, false);
     //for testing in Chrome browser uncomment
@@ -27,6 +28,7 @@ $(document).ready(function(){
  
 //PhoneGap is ready function
 function onDeviceReady() {
+	document.getElementById("shadow-runner-title").innerHTML ="ShadowRunner! Loaded PhoneGap Framework!";
     $(window).unbind();
     $(window).bind('pageshow resize orientationchange', function(e){
         max_height();
@@ -115,14 +117,23 @@ function geo_success(position) {
 </script>
  
 </head> 
-<body> 
+<body>
  
 <div data-role="page" id="index">
-    <div data-role="header" data-theme="b"><h1>Map Header</h1></div>
+    <div data-role="header" data-theme="b">ShadowRunner</div>
     <div data-role="content" style="padding:0;">
+    	<h1 id="shadow-runner-title">...</h1>
         <div id="map" style="width:100%;height:100%;"></div>
     </div>
-    <div data-role="footer" data-theme="b"><h4>Map Footer</h4></div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+    		 <div data-role="navbar">
+        	<ul>
+	            <li><a href="#">link</a></li>
+	            <li><a href="#">link</a></li>
+	            <li><a href="#">link</a></li>
+	            <li><a href="#">link</a></li>
+            </ul>
+    	</div>
 </div>
  </body> 
 </html>
