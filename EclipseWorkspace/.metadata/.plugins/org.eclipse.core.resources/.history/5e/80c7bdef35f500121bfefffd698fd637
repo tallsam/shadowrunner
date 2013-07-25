@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ShadowRunner</title>
+		<script type="text/javascript" src="../js/cordova.js"></script>
+		<!--jquery mobile includes -->
+		<link rel="stylesheet" href="../css/jquery.mobile-1.3.1.css" />
+	
+		 <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+		 <script type="text/javascript" src="../js/jquery.mobile-1.3.1.min.js"></script>
+
+		<script type="text/javascript">
+			/** Called when phonegap javascript is loaded */
+			function onDeviceReady(){
+				document.getElementById("shadow-runner-title").innerHTML ="ShadowRunner! Loaded PhoneGap Framework!";
+			}
+			
+			/** Called when browser load this page*/
+			function init(){
+				document.addEventListener("deviceready", onDeviceReady, false);
+			}
+		</script>
+	</head>
+	<body onLoad="init()">
+	<!-- jquery mobile initial page -->
+	<div data-role="page" id="index">
+    	<div data-role="header" data-theme="b">Header</div>
+    	<div data-role="content" style="padding:0;">
+      		<h1 id="shadow-runner-title">...</h1>
+			<a href="shadowmap.html">map</a>
+    	</div>
+    	<div data-role="footer" data-position="fixed" data-theme="b">
+    		 <div data-role="navbar">
+        	<ul>
+	            <li><a href="#">link</a></li>
+	            <li><a href="#">link</a></li>
+	            <li><a href="#">link</a></li>
+	            <li><a href="#">link</a></li>
+            </ul>
+    	</div>
+	</div>
+	</body>
+</html>
