@@ -1,8 +1,5 @@
 app.views.MapView = Backbone.View.extend({
 
-  initialize: function () {
-  },
-
   activate: function () {
     var map;
     var marker;
@@ -25,6 +22,10 @@ app.views.MapView = Backbone.View.extend({
     this.$el.html(this.template());
     this.activate();
     return this;
+  },
+
+  events: {
+    "click .back-button": "back",
   },
 
   back: function() {
