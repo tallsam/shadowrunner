@@ -8,7 +8,7 @@ var app = {
 
 $(document).on("ready", function () {
   app.router = new app.routers.AppRouter();
-  app.utils.templates.load(["HomeView"],
+  app.utils.templates.load(["HomeView", "MapView"],
     function () {
       app.router = new app.routers.AppRouter();
       Backbone.history.start();

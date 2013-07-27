@@ -5,8 +5,6 @@ app.views.HomeView = Backbone.View.extend({
 
   render: function () {
     this.$el.html(this.template());
-    $('.scroller', this.el).append('appended!');
-    console.log(this);
     return this;
   },
 
