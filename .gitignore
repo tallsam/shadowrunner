@@ -1,0 +1,14 @@
+# Shadowrunner .gitignore
+# Based on https://github.com/crilleengvall/gitignore/blob/master/Phonegap.gitignore
+
+# Built application files
+*.apk
+*.ap_
+
+# Java class files
+*.class
+
+# Generated Android Files
+platforms/android/bin
+platforms/android/gen
+platforms/android/assets

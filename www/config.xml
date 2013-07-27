@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.boom.shadowrunner" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap = "http://phonegap.com/ns/1.0">
+    <name>Shadowrunner</name>
+    <description>
+       Competitive run tracker
+    </description>
+    <author email="" href="">
+        Neil Steventon
+    </author>
+    <author email="sam@webzen.com.au" href="http://samhassell.com">
+        Sam Hassell
+    </author>
+    <access origin="*" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="true" />
+</widget>

@@ -1,6 +1,0 @@
-INDEX VERSION 1.126+D:\Development\Android\GithubProjects\shadowrunner\EclipseWorkspace\.metadata\.plugins\org.eclipse.jdt.core
-1970646156.index
-4198183964.index
-282698557.index
-3471058570.index
-1834875766.index
