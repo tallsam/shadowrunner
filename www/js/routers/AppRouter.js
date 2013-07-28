@@ -2,7 +2,7 @@ app.routers.AppRouter = Backbone.Router.extend({
 
   routes: {
     "": "home",
-    "map": "map",
+    "map": "map"
   },
 
   initialize: function () {
@@ -21,9 +21,8 @@ app.routers.AppRouter = Backbone.Router.extend({
   },
 
   map: function () {
-    app.mapView = new app.views.MapView();
-    app.mapView.render();
-    app.slider.slidePage(app.mapView.$el);
-  },
+    app.slider.slidePage(new app.views.MapView().render().$el);
+
+  }
 
 });

@@ -25,7 +25,7 @@ app.views.MapView = Backbone.View.extend({
   },
 
   events: {
-    "click .back-button": "back",
+    "click .back-button": "back"
   },
 
   back: function() {

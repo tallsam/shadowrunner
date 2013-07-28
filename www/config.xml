@@ -4,11 +4,8 @@
     <description>
        Competitive run tracker
     </description>
-    <author email="" href="">
-        Neil Steventon
-    </author>
-    <author email="sam@webzen.com.au" href="http://samhassell.com">
-        Sam Hassell
+    <author email="sam@webzen.com.au" href="http://webzen.com.au">
+        Boom! Apps
     </author>
     <access origin="*" />
     <preference name="fullscreen" value="true" />
