@@ -21,7 +21,14 @@ app.routers.AppRouter = Backbone.Router.extend({
   },
 
   map: function () {
-    app.slider.slidePage(new app.views.MapView().render().$el);
+    // Since the map view never changes, we instantiate it and render it only once
+    if (!app.mapView) {
+      app.mapView = new app.views.MapView();
+      app.mapView.render();
+    } else {
+      app.mapView.delegateEvents(); // delegate events when the view is recycled
+    }
+    app.slider.slidePage(app.mapView.$el);
 
   }
 
