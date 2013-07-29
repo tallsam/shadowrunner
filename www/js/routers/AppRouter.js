@@ -2,7 +2,8 @@ app.routers.AppRouter = Backbone.Router.extend({
 
   routes: {
     "": "home",
-    "map": "map"
+    "map": "map",
+    "run": "run"
   },
 
   initialize: function () {
@@ -29,7 +30,17 @@ app.routers.AppRouter = Backbone.Router.extend({
       app.mapView.delegateEvents(); // delegate events when the view is recycled
     }
     app.slider.slidePage(app.mapView.$el);
+  },
 
+  run: function () {
+    // Since the map view never changes, we instantiate it and render it only once
+    if (!app.runView) {
+      app.runView = new app.views.RunView();
+      app.runView.render();
+    } else {
+      app.runView.delegateEvents(); // delegate events when the view is recycled
+    }
+    app.slider.slidePage(app.runView.$el);
   }
 
 });
